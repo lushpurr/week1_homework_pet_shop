@@ -45,6 +45,15 @@ def remove_customer_cash(shop, amount):
     shop["cash"] -= amount
     return shop["cash"]
 
+def get_customer_pet_count(shop):
+    return len(shop["pets"])
+
+def add_pet_to_customer(shop, new_pet):
+    shop["pets"].append(new_pet)
+    return len(shop["pets"])
+
+
+
 # Simpler version:
 # def all_favourite_foods(people):
 #   favourite_foods = []
