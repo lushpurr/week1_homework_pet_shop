@@ -24,7 +24,10 @@ def get_pets_by_breed(shop, breed):
             breed_count.append(pet)
     return breed_count
 
-# def find_pet_by_name(shop, pet_name):
+def find_pet_by_name(shop, pet_name):
+    for pet in shop["pets"]:
+        if pet["name"] == pet_name:
+            return pet
 
 
 
