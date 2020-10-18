@@ -67,23 +67,33 @@ def customer_can_afford_pet(customers, new_pet):
             return False
     
 
-    
+def sell_pet_to_customer(shop, new_pet, customer):
+    add_pet_to_customer(customer, new_pet)
+    increase_pets_sold(shop, 1) #?
+    remove_customer_cash(customer, new_pet["price"])
+    add_or_remove_cash(shop, new_pet["price"])
+
+
+
+
+
+
+
+# add the pet to the customers pet list
+# 12:30
+# increase the pet shops number of pets sold
+# 12:31
+# take the price of the pet off of the customers cash amount
+# 12:31
+# add the price of the pet onto the pet shops total cash amount
+
+
+
+
+
     # pdb.set_trace()
 
 
 
-    # for pet in customer["cash"]:
-    #     if customer["cash"] >= pet["price"]:
-    #         return True
-    #     else: 
-    #         return False
-
-# Simpler version:
-# def all_favourite_foods(people):
-#   favourite_foods = []
-#   for person in people:
-#     favourite_foods.extend(person["favourites"]["snacks"])
-  
-#   return favourite_foods
 
 
